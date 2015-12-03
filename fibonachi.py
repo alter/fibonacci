@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import sys
 import re
-MAX_RECURSION = 1000
+MAX_RECURSION = 10000
 sys.setrecursionlimit(MAX_RECURSION)
 
 def usage():
@@ -12,18 +12,16 @@ if( len(sys.argv) < 2 or int(sys.argv[1]) < 2 or int(sys.argv[1]) > MAX_RECURSIO
   usage()
 
 i = 0
-fibolist = []
 
 def fibonacci(x,y):
   global i
   global fibolist
   i += 1 
   if( i == int(sys.argv[1]) ):
+    print y
     return 
   sum = x+y
-  fibolist.append(sum)
   fibonacci(y, sum)
    
 fibonacci(1,1)
-print fibolist[-1]
 
