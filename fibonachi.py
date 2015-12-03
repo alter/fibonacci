@@ -17,7 +17,7 @@ def fibonacci(x,y):
   global i
   global fibolist
   i += 1 
-  if( i == int(sys.argv[1]) ):
+  if( i == int(sys.argv[1])-1 ):
     print y
     return 
   sum = x+y
