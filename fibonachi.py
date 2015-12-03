@@ -7,10 +7,7 @@ def usage():
   print "Usage: %s [seq_number]\n\tseq_number should be between 2 and 9998" % sys.argv[0]
   exit(1)
 
-if( len(sys.argv) < 2 ):
-  usage()
-print sys.argv[1]
-if( int(sys.argv[1]) < 2 or int(sys.argv[1]) > 9998 ):
+if( len(sys.argv) < 2 or int(sys.argv[1]) < 2 or int(sys.argv[1]) > 9998 ):
   usage()
 
 i = 0
